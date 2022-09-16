@@ -15,33 +15,9 @@
  */
 
 import React from "react";
-import ReactDOM from "react-dom";
 
-import "./App.css";
-
-import Meals from "./Meals";
-import Model from "./Modal";
-import Search from "./Search";
-import Favorites from "./Favorites";
-
-import { AppProvider } from "../context";
-
-const App = () => {
-  return (
-    <main>
-      {/*<Search />*/}
-      {/*<Favorites />*/}
-      <Meals />
-      {/*<Model /> */}
-    </main>
-  );
+const Search = () => {
+  return <div>Search</div>;
 };
 
-ReactDOM.render(
-  <React.StrictMode>
-    <AppProvider>
-      <App />
-    </AppProvider>
-  </React.StrictMode>,
-  document.getElementById("app")
-);
+export default Search;
