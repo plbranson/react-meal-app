@@ -20,19 +20,21 @@ import ReactDOM from "react-dom";
 import "./App.css";
 
 import Meals from "./Meals";
-import Model from "./Modal";
+import Modal from "./Modal";
 import Search from "./Search";
 import Favorites from "./Favorites";
 
-import { AppProvider } from "../context";
+import { AppProvider, useGlobalContext } from "../context";
 
 const App = () => {
+  const { showModal } = useGlobalContext();
+
   return (
     <main>
       <Search />
       {/*<Favorites />*/}
       <Meals />
-      {/*<Model /> */}
+      {showModal && <Modal />}
     </main>
   );
 };
